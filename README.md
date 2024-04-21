@@ -60,7 +60,7 @@ steps:
   continueOnError: On
   displayName: 'Uploading PDF to Azure Artifacts'
 ```
-<br>
+
 ![image](https://github.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/assets/69405400/849706e9-d40a-4b2b-8e8c-1af269e9a303)
 
 
