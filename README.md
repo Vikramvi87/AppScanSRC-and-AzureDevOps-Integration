@@ -13,7 +13,7 @@ Requirements:<br>
 5.3 - Change User Service to same User that has access in AppScan Enterprise (Service User).<br>
 6 - Create a AppScan Source token <install_dir>\bin\ounceautod.exe -u <domain\user> -p <password> --persist.<br>
 7 - The AppScan Enterprise URL to be used in the AzureDevOps Pipeline as a variable.<br>
-8 - Generate a key pair of AppScan Enterprise Rest API to be used in the AzureDevOps Pipeline as a variable. Open Appscan Enterprise, click in Rest API in main menu, click in the Account endpoint, click in  <br>
+8 - Generate a key pair of AppScan Enterprise Rest API to be used in the AzureDevOps Pipeline as a variable. Open Appscan Enterprise, click in Rest API in main menu, click in the Account endpoint, click in POST /account/key, click in Execute Request button and copy the key pair.<br>
 <br>
 
 ```yaml
