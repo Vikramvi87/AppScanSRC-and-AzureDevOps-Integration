@@ -3,14 +3,18 @@
 It will help to Integrate AppScan Source on AzureDevOps. It will enable AzureDevOps to start scan, generate report, publish results to AppScan Source Database and AppScan Enterprise and check for Security Gate.<br>
 <br>
 Requirements:<br>
-1 - AppScan Source in Windows Server.<br>
-2 - Add AppScan Source bin folder to Windows PATH Environment Variable.<br>
-3 - Install Azure Pipeline Agent for Windows in same Windows Server that has AppScan Source. https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/windows-agent?view=azure-devops<br>
-3.1 - Add Azure Pipeline Agentr as a Service.<br>
-3.2 - Change User Service to same User that has access in AppScan Enterprise.<br>
-4 - Create AppScan Enterprise token <install_dir>\bin\ounceautod.exe -u username -p password --persist.<br>
-  Source: https://help.hcltechsw.com/appscan/Source/10.0.8/topics/ounce_auto_login.html <br>
-  <br>
+1 - AppScan Source installed in a Windows Server.<br>
+2 - AppScan Source for Automation License. It will enable run scan through command line.<br>
+3 - Install Powershell 7.<br>
+4 - Add AppScan Source bin folder to Windows PATH (System) Environment Variable.<br>
+5 - Install a Self-hosted agent of Azure Pipeline in same Windows Server that has AppScan Source. https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/windows-agent?view=azure-devops<br>
+5.1 - Connection (Firewall rules) between Self-hosted agent (AppScan Source Server) and  AzureDevOps.<br>
+5.2 - Add Self-hosted agent as a Service.<br>
+5.3 - Change User Service to same User that has access in AppScan Enterprise (Service User).<br>
+6 - Create a AppScan Source token <install_dir>\bin\ounceautod.exe -u <domain\user> -p <password> --persist.<br>
+7 - The AppScan Enterprise URL to be used in the AzureDevOps Pipeline as a variable.<br>
+8 - Generate a key pair of AppScan Enterprise Rest API to be used in the AzureDevOps Pipeline as a variable. Open Appscan Enterprise, click in Rest API in main menu, click in the Account endpoint, click in  <br>
+<br>
 
 ```yaml
 variables:
