@@ -61,5 +61,6 @@ steps:
   displayName: 'Uploading PDF to Azure Artifacts'
 ```
 <br>
-![image](https://github.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/assets/69405400/8194d1f7-3334-4b2d-9753-3857e6627749)
+![image](https://github.com/jrocia/AppScanSRC-and-AzureDevOps-Integration/assets/69405400/849706e9-d40a-4b2b-8e8c-1af269e9a303)
+
 
