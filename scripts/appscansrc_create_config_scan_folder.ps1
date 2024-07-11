@@ -28,7 +28,6 @@ if ($env:compiledArtifactFolder -ne "none"){
   write-output "sc `"$env:aseAppName-$env:BuildNumber.ozasmt`" -scanconfig `"$env:scanConfig`" -name `"$env:aseAppName-$env:BuildNumber`"" >> script.scan
   write-output "report Findings pdf-detailed `"$env:aseAppName-$env:BuildNumber.pdf`" `"$env:aseAppName-$env:BuildNumber.ozasmt`" -includeSrcBefore:5 -includeSrcAfter:5 -includeTrace:definitive -includeTrace:suspect -includeHowToFix" >> script.scan
   write-output "pa `"$env:aseAppName-$env:BuildNumber.ozasmt`"" >> script.scan
-  write-output "pase `"$env:aseAppName-$env:BuildNumber.ozasmt`" -aseapplication $env:aseAppName -name `"$env:aseAppName-$env:BuildNumber`"" >> script.scan
   write-output "logout" >> script.scan
   
   write-host "Config file created for compiled folder $env:WorkingDirectory\$env:compiledArtifactFolder."
@@ -40,7 +39,6 @@ else{
   write-output "sc `"$env:aseAppName-$env:BuildNumber.ozasmt`" -scanconfig `"$env:scanConfig`" -name `"$env:aseAppName-$env:BuildNumber`" -sourcecodeonly true" >> script.scan
   write-output "report Findings pdf-detailed `"$env:aseAppName-$env:BuildNumber.pdf`" `"$env:aseAppName-$env:BuildNumber.ozasmt`" -includeSrcBefore:5 -includeSrcAfter:5 -includeTrace:definitive -includeTrace:suspect -includeHowToFix" >> script.scan
   write-output "pa `"$env:aseAppName-$env:BuildNumber.ozasmt`"" >> script.scan
-  write-output "pase `"$env:aseAppName-$env:BuildNumber.ozasmt`" -aseapplication $env:aseAppName -name `"$env:aseAppName-$env:BuildNumber`"" >> script.scan
   write-output "logout" >> script.scan
   
   write-host "Config file created (source code only scan)."
